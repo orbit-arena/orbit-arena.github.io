@@ -1,0 +1,49 @@
+@font-face { font-family: 'Archivo Black'; src: url('fonts/ArchivoBlack-Regular.ttf') format('truetype'); font-display: swap; }
+@font-face { font-family: 'Archivo'; src: url('fonts/Archivo-Variable.ttf') format('truetype'); font-weight: 100 900; font-display: swap; }
+
+:root {
+  --paper: #F3EEE3;
+  --surface: #FBF9F4;
+  --ink: #141414;
+  --muted: #6E685C;
+  --line: #DDD5C5;
+  --coral: #E8492E;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --paper: #17171A; --surface: #202024; --ink: #F4F1EA; --muted: #9C978C; --line: #34343A; --coral: #FF5A3C; }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.6 'Archivo', system-ui, sans-serif;
+}
+a { color: inherit; text-decoration-color: var(--coral); text-underline-offset: 3px; }
+a:hover { color: var(--coral); }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+
+header.top { border-bottom: 1px solid var(--line); }
+header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 14px; padding-bottom: 14px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.brand svg { width: 34px; height: 34px; flex: none; }
+.brand span { font: 18px/1 'Archivo Black', sans-serif; letter-spacing: 0.02em; }
+nav a { margin-left: 16px; font-size: 15px; color: var(--muted); }
+
+h1, h2, h3 { font-family: 'Archivo Black', sans-serif; font-weight: 400; line-height: 1.15; }
+h1 { font-size: clamp(34px, 7vw, 56px); margin: 56px 0 12px; text-transform: uppercase; }
+h2 { font-size: 22px; margin: 40px 0 8px; }
+h3 { font-size: 17px; margin: 24px 0 4px; }
+.bar { width: 64px; height: 8px; background: var(--coral); margin: 0 0 20px; }
+.lead { font-size: 20px; color: var(--muted); max-width: 34ch; }
+.muted { color: var(--muted); }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 20px; margin: 24px 0; }
+ul { padding-left: 20px; }
+li { margin: 4px 0; }
+.links { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; list-style: none; }
+.links a { display: inline-block; border: 1px solid var(--ink); border-radius: 6px; padding: 8px 14px; text-decoration: none; font-weight: 600; }
+.links a:hover { border-color: var(--coral); }
+footer { border-top: 1px solid var(--line); margin-top: 64px; padding: 20px 0 40px; font-size: 14px; color: var(--muted); }
+footer a { margin-right: 16px; }
